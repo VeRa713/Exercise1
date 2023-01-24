@@ -17,7 +17,7 @@ namespace Exercise1
             SimCard mySmartSim = new SimCard("mySmartSim09963852741", "Smart");
             SimCard yourSmartSim = new SimCard("yourSmartSim09741852963", "Smart");
 
-            SmartPhone mySmartPhone = new SmartPhone("MS Teams", mySmartSim, "Samsung", "BoraPurple", "S22");
+            SmartPhone mySmartPhone = new SmartPhone("MS Teams", mySmartSim, "Samsung", "BoraPurple", "S22 Ultra");
             SmartPhone yourSmartPhone = new SmartPhone("Zoom", yourSmartSim, "Samsung", "Lilac", "Flip Z");
 
             // MobilePhone -> MobilePhone
@@ -39,6 +39,9 @@ namespace Exercise1
 
             //Display total size of applications
             Console.WriteLine("\nTotal Memory Consumed: "+  mySmartPhone.GetTotalSize());
+
+            //Display the smartPhone
+            mySmartPhone.displayInfo(mySmartPhone);
         }
     }
 }

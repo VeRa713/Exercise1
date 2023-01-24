@@ -20,6 +20,12 @@ namespace Exercise1.Models
             return this.SimCard.PhoneNumber;
         }
 
+        public string GetNetwork()
+        {
+            return this.SimCard.Network;
+        }
+
+
         public void SwapSimCard(SimCard simCard)
         {
             //replace old number
