@@ -12,5 +12,8 @@ namespace Exercise1.Models
         }
 
         //Add methods here
+        public void setNewNumber(String newNumber){
+            this.PhoneNumber = newNumber;
+        }
     }
 }

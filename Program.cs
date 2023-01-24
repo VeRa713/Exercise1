@@ -31,6 +31,11 @@ namespace Exercise1
             Console.WriteLine("\n==== SMARTPHONE TO UNKNOWN NUMBER ====");
             mySmartPhone.CallFromBrowser("unknownNumber09512357468");
 
+            Console.WriteLine("\n==== CHANGE NUMBER ====");
+            SimCard newSim = new SimCard("NEWSim0917364825", "Smart");
+            myMobile.SwapSimCard(newSim);
+            Console.WriteLine("Your new number is: " + myMobile.GetPhoneNumber());
+
             //Add applications to Smartphone
             Console.WriteLine("\n==== ADD APPLICATION ====");
             

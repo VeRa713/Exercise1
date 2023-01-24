@@ -28,7 +28,7 @@ namespace Exercise1.Models
 
         public void SwapSimCard(SimCard simCard)
         {
-            //replace old number
+            SimCard.setNewNumber(simCard.PhoneNumber);
         }
 
         public void Call(string phoneNumber)
