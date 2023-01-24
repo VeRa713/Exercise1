@@ -1,2 +1,44 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Exercise1.Models;
+
+namespace Exercise1
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            // 2 instances of MobilePhone
+            SimCard myMobileSim = new SimCard("myMobileSim09987654321", "Globe");
+            SimCard yourMobileSim = new SimCard("yourMobileSim09123456789", "Globe");
+
+            MobilePhone myMobile = new MobilePhone(myMobileSim, "BRAND", "COLOR", "MODEL");
+            MobilePhone yourMobile = new MobilePhone(yourMobileSim, "BRAND", "COLOR", "MODEL");
+
+            // 2 instances of SmartPhone
+            SimCard mySmartSim = new SimCard("mySmartSim09963852741", "Smart");
+            SimCard yourSmartSim = new SimCard("yourSmartSim09741852963", "Smart");
+
+            SmartPhone mySmartPhone = new SmartPhone("MS Teams", mySmartSim, "Samsung", "BoraPurple", "S22");
+            SmartPhone yourSmartPhone = new SmartPhone("Zoom", yourSmartSim, "Samsung", "Lilac", "Flip Z");
+
+            // MobilePhone -> MobilePhone
+            Console.WriteLine("\n==== MOBILE TO MOBILE ====");
+            myMobile.Call(yourMobile);
+
+            // SmartPhone -> SmartPhone
+            Console.WriteLine("\n==== SMARTPHONE TO SMARTPHONE ====");
+            mySmartPhone.CallFromBrowser(yourSmartPhone);
+
+            Console.WriteLine("\n==== SMARTPHONE TO UNKNOWN NUMBER ====");
+            mySmartPhone.CallFromBrowser("unknownNumber09512357468");
+
+            //Add applications to Smartphone
+            Console.WriteLine("\n==== ADD APPLICATION ====");
+            
+            App newApp = new App("Discord", 94.05f);
+            mySmartPhone.AddApplication(newApp);
+
+            //Display total size of applications
+            Console.WriteLine("\nTotal Memory Consumed: "+  mySmartPhone.GetTotalSize());
+        }
+    }
+}

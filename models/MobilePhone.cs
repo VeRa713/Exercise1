@@ -17,7 +17,7 @@ namespace Exercise1.Models
 
         public string GetPhoneNumber()
         {
-            return "Phone Number";
+            return this.SimCard.PhoneNumber;
         }
 
         public void SwapSimCard(SimCard simCard)
@@ -31,7 +31,7 @@ namespace Exercise1.Models
         }
 
         public void Call(MobilePhone mobilePhone){
-            Console.WriteLine("Calling from ");
+            Console.WriteLine("Calling [" + mobilePhone.GetPhoneNumber() + "] from [" + this.GetPhoneNumber() + "]");
         }
     }
 }
