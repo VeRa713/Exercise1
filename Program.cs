@@ -23,10 +23,12 @@ namespace Exercise1
             // MobilePhone -> MobilePhone
             Console.WriteLine("\n==== MOBILE TO MOBILE ====");
             myMobile.Call(yourMobile);
+            myMobile.Call("099999999");
 
             // SmartPhone -> SmartPhone
             Console.WriteLine("\n==== SMARTPHONE TO SMARTPHONE ====");
             mySmartPhone.CallFromBrowser(yourSmartPhone);
+            mySmartPhone.Call("9999999");
 
             Console.WriteLine("\n==== SMARTPHONE TO UNKNOWN NUMBER ====");
             mySmartPhone.CallFromBrowser("unknownNumber09512357468");

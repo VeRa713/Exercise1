@@ -13,7 +13,8 @@ namespace Exercise1.Models
 
         public void CallFromBrowser(string phoneNumber)
         {
-            Console.WriteLine(this.GetPhoneNumber() + " is calling " + phoneNumber + " from " + this.Browser);
+            Console.WriteLine("Calling from " + this.Browser);
+            base.Call(phoneNumber);
         }
 
         public void CallFromBrowser(MobilePhone mobilePhone)
