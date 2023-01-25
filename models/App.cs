@@ -7,7 +7,7 @@ namespace Exercise1.Models
 
         public App(string name, float size){
             this.Name = name;
-            this.Size = this.Size + size;
+            this.Size = size;
         }
     }
 }

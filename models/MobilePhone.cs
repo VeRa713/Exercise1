@@ -33,7 +33,7 @@ namespace Exercise1.Models
 
         public void Call(string phoneNumber)
         {
-            Console.WriteLine("Calling " + phoneNumber + "from ");
+            Console.WriteLine("Calling [" + phoneNumber + "] from [" + this.SimCard.PhoneNumber + "]");
         }
 
         public void Call(MobilePhone mobilePhone){

@@ -39,8 +39,10 @@ namespace Exercise1
             //Add applications to Smartphone
             Console.WriteLine("\n==== ADD APPLICATION ====");
             
-            App newApp = new App("Discord", 94.05f);
+            App newApp = new App("Discord", 94.50f);
+            App newApp2 = new App("Some App", 1.50f);
             mySmartPhone.AddApplication(newApp);
+            mySmartPhone.AddApplication(newApp2);
 
             //Display total size of applications
             Console.WriteLine("\nTotal Memory Consumed: "+  mySmartPhone.GetTotalSize());
